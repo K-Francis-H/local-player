@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from "react";
-import {useEffect} from "react";
+import useFetch from "react-fetch-hook";
 
 const TEST_ARTISTS = [
   {name: "Mesarthim"},
@@ -77,9 +77,20 @@ export default function Main(){
   
   //try to get artists from api in node express now
   //fall back to TEST_ARTISTS
+  //fetch /api/artists
+  const {isLoading, error, data} = useFetch("/api/artists");
+
+  if(isLoading) {
+    return "Loading...";
+  }
+  if(error){
+    console.log("Error: "+error);
+  }
+
+  const artists = error ? TEST_ARTISTS : data;
 
 
-  return <MusicPlayer artists={TEST_ARTISTS} />;
+  return <MusicPlayer artists={artists} />;
 }
 
 function App() {
