@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {useState} from "react";
 import useFetch from "react-fetch-hook";
+import {Link} from "react-router-dom";
 
 const TEST_ARTISTS = [
   {name: "Mesarthim"},
@@ -60,8 +61,14 @@ function ArtistList({artists, searchText}){
 function ArtistListElement({artist}){
   return (
     <tr>
-      <a href=""><h2>{artist.name}</h2></a>
+      <Link to="/Album">{artist.name}</Link>
     </tr>
+  )
+}
+
+function Album({artist, songs}){
+  return (
+    <div>hello album</div>
   )
 }
 
