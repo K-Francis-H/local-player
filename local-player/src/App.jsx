@@ -1,8 +1,12 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import {useState} from "react";
 import useFetch from "react-fetch-hook";
 import {Link} from "react-router-dom";
+
+//import Album from "./Album.jsx";
+//import Artist from "./Artist.jsx";
+
 
 const TEST_ARTISTS = [
   {name: "Mesarthim"},
@@ -61,20 +65,39 @@ function ArtistList({artists, searchText}){
 function ArtistListElement({artist}){
   return (
     <tr>
-      <Link to="/Album">{artist.name}</Link>
+      <Link to={`${artist.name}`} state={artist}>{artist.name}</Link>
     </tr>
   )
+  //<Link to="/Album">{artist.name}</Link>
 }
 
-function Album({artist, songs}){
-  return (
-    <div>hello album</div>
+//function Album({artist, songs}){
+//  return (
+//    <div>hello album</div>
+//  )
+//}
+
+function Album(){
+  return(
+    <div>album</div>
   )
 }
 
+const Artist = ({location}) => {
+  const { artist = {name:"unknown"} } = location.state || {name:"unknown"}
+  console.log(artist);
+  return (
+    <div>{artist.name}</div>
+  )
+}
 
+/*function Artist({artist}){
+  return (
+    <div>{artist.name}</div>
+  )
+}*/
 
-export default function Main(){
+export default function App(){
     //let artists = await getAllArtists();
   //const res = await fetch("/api/artists");
   //const artists = await res.json();
@@ -97,9 +120,14 @@ export default function Main(){
   const artists = error ? TEST_ARTISTS : data;
 
 
-  return <MusicPlayer artists={artists} />;
-}
+  return ( 
+    <>
 
+      <MusicPlayer artists={artists} />
+    </>
+  )
+}
+/*
 function App() {
   return (
     <div className="App">
@@ -120,6 +148,6 @@ function App() {
     </div>
   );
 }
-
+*/
 //export default Main;
 
