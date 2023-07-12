@@ -68,6 +68,18 @@ async function getSongsForAlbum(artist, album){
 	return songs;
 }
 
+async function getSong(artist, album, song){
+	let path = os.homedir()+"/Music/"+artist+"/"+album+"/"+song;
+	var song = []; //uhhh this will be bytes mmaybe I should use typescript
+	try{
+		song = await fs.readFile(path)
+	}catch(e){
+		console.log(e);
+	}
+	return song;
+}
+
+
 app.use(express.static(path.join(__dirname, '../build')));
 
 app.use("/api", function(req, res, next){
@@ -93,11 +105,22 @@ app.get("/api/:artist/albums", async function(req, res) {
 });
 
 app.get("/api/:artist/:album", async function(req, res) {
+	console.log("/api/:artist/:album");
 	let artist = req.params.artist;
 	let album = req.params.album;
 	let songs = await getSongsForAlbum(artist, album);
 
 	res.send(JSON.stringify(songs));
+})
+
+app.get("/api/:artist/:album/:song", async function(req, res){
+	console.log("/api/:artist/:album/:song")
+	let artist = req.params.artist;
+	let album = req.params.album;
+	let song = req.params.song;
+	let songData = await getSong(artist, album, song);
+
+	res.send(songData);
 })
 
 httpServer.listen(PORT);

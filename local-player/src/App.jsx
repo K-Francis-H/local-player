@@ -65,7 +65,7 @@ function ArtistList({artists, searchText}){
 function ArtistListElement({artist}){
   return (
     <tr>
-      <Link to={`${artist.name}`} state={artist}>{artist.name}</Link>
+      <Link to="/artist" state={artist}>{artist.name}</Link>
     </tr>
   )
   //<Link to="/Album">{artist.name}</Link>

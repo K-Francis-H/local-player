@@ -14,8 +14,8 @@ root.render(
     <BrowserRouter>
         <Routes>
             <Route index element={<App />}/>
-            <Route path=":artist" element={<Artist />}/>
-            <Route path="album" element={<Album />}/>
+            <Route path="artist" element={<Artist />}/>
+            <Route path="artist/album" element={<Album />}/>
         </Routes>
     </BrowserRouter>
   </React.StrictMode>

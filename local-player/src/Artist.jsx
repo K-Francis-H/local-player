@@ -1,22 +1,51 @@
 import React from 'react';
 import {useLocation} from "react-router-dom";
+import useFetch from "react-fetch-hook";
+import {Link} from "react-router-dom";
 
 export default function Artist(){
-	console.log("artist");
-	console.log(this);
 	const location = useLocation();
-	console.log(location);
+	let artist = location.state || {name: "unknown"};
+	//console.log(location);
+
+	const {isLoading, error, data} = useFetch("/api/"+artist.name+"/albums");
+
+	if(isLoading){
+		console.log("artist albums loading...");
+		return(<div>Loading...</div>);
+	}
+	if(error){
+		console.log(error);
+	}
+
+	console.log(data);
+
 	return(
-		<div>Artist</div>
+		<>
+			<h1>{artist.name}</h1>
+			<AlbumList albums={data} />
+		</>
 	)
 }
-/*
-const Artist = ({location}) => {
-  const { artist = {name:"unknown"} } = location.state || {name:"unknown"}
-  console.log(artist);
-  return (
-    <div>{artist.name}</div>
-  )
-}*/
 
-//export default Artist;
+function AlbumList({albums}){
+	const items = [];
+	albums.forEach((album) => {
+		items.push(
+			<AlbumListElement album={album} />
+		);
+	})
+	return (
+		<table>
+		  <tbody>{items}</tbody>
+		</table>
+	);
+}
+
+function AlbumListElement({album}){
+	return (
+    <tr>
+    	<Link to="/artist/album" state={album}>{album.name}</Link>
+    </tr>
+  )
+}
