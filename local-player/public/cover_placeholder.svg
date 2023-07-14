@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2" viewBox="0 0 128 128" version="1.0">
+  <defs id="defs4">
+    <linearGradient id="linearGradient3024" x1="46.682" gradientUnits="userSpaceOnUse" x2="92.877" gradientTransform="matrix(4 0 0 4 -138.24 -2099.3)" y1="698.6" y2="652.4">
+      <stop id="stop4885-2" stop-color="#b3b3b3" offset="0"/>
+      <stop id="stop4887-4" stop-color="#b3b3b3" stop-opacity="0" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g id="layer1" transform="translate(-48.898 -567.87)">
+    <rect id="rect3000" rx="18.031" ry="16.263" height="128" width="128" y="567.87" x="48.898" fill="url(#linearGradient3024)"/>
+    <path id="path2563" fill="#006680" d="m96.738 686.46c-5.3408-0.89244-11.443-5.661-13.904-10.865-8.0285-16.976 10.051-34.732 26.679-26.201 1.5971 0.8194 3.0084 1.3214 3.1364 1.1156 0.12792-0.2056 0.11872-4.2592-0.0192-9.0076-0.81717-27.863-1.2417-55.131-0.92735-59.563l0.35244-4.9686 5.1429 8.6952c2.8286 4.7824 6.1726 10.279 7.4312 12.215 3.2628 5.018 8.3124 9.8656 15.083 14.479 3.6592 2.4936 5.5192 3.9957 5.1757 4.1798-1.3325 0.71428-9.9758 2.1126-11.403 1.8448-4.0415-0.7582-8.1895-4.7869-12.265-11.912-0.61874-1.0817-1.292-1.9668-1.4962-1.9668-0.20416 0-0.5224 0.88508-0.70714 1.9668-0.58108 3.4023-0.2946 28.321 0.48437 42.13 1.0139 17.974 1.022 21.385 0.057 24.222-3.3738 9.9207-12.48 15.363-22.818 13.635z"/>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Music Icon</dc:title>
+        <dc:date>2010-12-13T05:25:28</dc:date>
+        <dc:description>Icon, Music, clip art, clipart, </dc:description>
+        <dc:source>http://openclipart.org/detail/100489/music-icon-by-jphandrigan</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>jphandrigan</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Icon</rdf:li>
+            <rdf:li>Music</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
