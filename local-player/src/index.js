@@ -21,7 +21,9 @@ root.render(
   </React.StrictMode>
 );
 
-
+//try ^ using :artist and :artist/albums
+//and maybe :artist/albums/:album
+//so that it doesnt get lost
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

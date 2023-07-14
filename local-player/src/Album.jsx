@@ -45,11 +45,11 @@ function SongList({songs}){
 }
 
 function SongListElement({song}){
-	let audioApiSrc = `/api/${song.artist}/${song.album}/${song.song}`;
+	let audioApiSrc = `/raw/${song.artist}/${song.album}/${song.song}`;
 	return (
 		<tr>
 			<div>{song.song}</div>
-			<audio controls src={audioApiSrc}></audio>
+			<audio controls preload="metadata" src={audioApiSrc}></audio>
 		</tr>
 	)
 }

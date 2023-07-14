@@ -43,8 +43,10 @@ function AlbumList({albums}){
 }
 
 function AlbumListElement({album}){
+	let imgSrc = `/raw/${album.artist}/${album.name}/cover`;
 	return (
     <tr>
+    	<img width="150px" height="auto" src={imgSrc} />
     	<Link to="/artist/album" state={album}>{album.name}</Link>
     </tr>
   )

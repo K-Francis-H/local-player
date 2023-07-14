@@ -49,6 +49,7 @@ function SearchBar({searchText,onSearchTextChange}){
 function ArtistList({artists, searchText}){
   const items = [];
   artists.forEach((artist) => {
+    //TODO check item type, if its a song use a SongListElement instead
     if(artist.name.toLowerCase().includes(searchText.toLowerCase())){
       items.push(
         <ArtistListElement artist={artist} />
