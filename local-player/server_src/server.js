@@ -179,6 +179,7 @@ app.use("/api", function(req, res, next){
 
 app.get("/api/artists", async function(req, res) {
 	console.log("/api/artists");
+	
 	const artists = await getAllArtists();
 	//res.setHeader("Content-Type", "application/json");
 	res.send(JSON.stringify(artists));
@@ -186,6 +187,7 @@ app.get("/api/artists", async function(req, res) {
 
 app.get("/api/:artist/albums", async function(req, res) {
 	console.log("/api/:artist/albums");
+
 	let artist = req.params.artist; //TODO sanitize this maybe
 	//check for ../ and send an error if that occurs or
 	//use tokenization for the artists so that only valid inputs can be received
@@ -204,7 +206,7 @@ app.get("/api/:artist/:album", async function(req, res) {
 
 app.get("/raw/:artist/:album/cover", async function(req,res) {
 	console.log("/raw/:artist/:album/cover")
-	//have a backup file in case there is no cover
+
 	let artist = req.params.artist;
 	let album = req.params.album;
 	let cover = await getCover(artist, album);
@@ -216,6 +218,7 @@ app.get("/raw/:artist/:album/cover", async function(req,res) {
 //change to /raw/... so that we can set our own headers
 app.get("/raw/:artist/:album/:song", async function(req, res){
 	console.log("/api/:artist/:album/:song")
+
 	let artist = req.params.artist;
 	let album = req.params.album;
 	let song = req.params.song;

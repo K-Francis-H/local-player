@@ -18,7 +18,7 @@ function MusicPlayer({artists}){
   const [searchText, setSearchText] = useState('');
 
   return (
-    <main>
+    <div className="MusicPlayer">
       <SearchBar 
         searchText={searchText} 
         onSearchTextChange={setSearchText} 
@@ -27,7 +27,7 @@ function MusicPlayer({artists}){
         artists={artists} 
         searchText={searchText}
       />
-    </main>
+    </div>
   )
 }
 
@@ -38,7 +38,7 @@ function SearchBar({searchText,onSearchTextChange}){
       <form>
         <input 
           type="text" 
-          value={searchText} placeholder="Search..." 
+          value={searchText} placeholder="Search Artists..." 
           onChange={(e) => onSearchTextChange(e.target.value)}
         />
       </form>
@@ -57,17 +57,15 @@ function ArtistList({artists, searchText}){
     }
   })
   return (
-    <table>
-      <tbody>{items}</tbody>
-    </table>
+    <div className="center">
+      <div>{items}</div>
+    </div>
   );
 }
 
 function ArtistListElement({artist}){
   return (
-    <tr>
-      <Link to="/artist" state={artist}>{artist.name}</Link>
-    </tr>
+      <Link className="ArtistCard" to="/artist" state={artist}>{artist.name}</Link>
   )
   //<Link to="/Album">{artist.name}</Link>
 }
@@ -123,7 +121,6 @@ export default function App(){
 
   return ( 
     <>
-
       <MusicPlayer artists={artists} />
     </>
   )

@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+.MusicPlayer {
+  text-align:center;
+}
+
+.center-text {
+  text-align:center;
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.margin15px {
+  margin: 2vh;
+}
+
+.ArtistCard {
+  display: flex;
+  justify-content: center;
+  margin: 2vh;
+  padding: 1vh;
+  border: 2px black solid;
+  height: 5vh;
+  width: 25vw;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  border-radius: 1vh;
+  background-color: #EEE;
+}
+
+table {
+  border-collapse: collapse;
+}

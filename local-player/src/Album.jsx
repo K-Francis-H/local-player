@@ -19,12 +19,15 @@ export default function Album(){
 	}
 
 	console.log(data);
+	const songs = error ? SONGS : data;
 
 	return (
 		<>
-			<h1>{album.artist}</h1>
-			<h3>{album.name}</h3>	
-			<SongList songs={data} />
+			<div className="MusicPlayer">
+				<h1>{album.artist}</h1>
+				<h3>{album.name}</h3>	
+				<SongList songs={songs} />
+			</div>
 		</>
 	)
 }
@@ -38,7 +41,7 @@ function SongList({songs}){
 	});
 	console.log(items);
 	return (
-		<table>
+		<table className="center">
 		  <tbody>{items}</tbody>
 		</table>
 	);
