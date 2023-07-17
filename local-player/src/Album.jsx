@@ -41,18 +41,18 @@ function SongList({songs}){
 	});
 	console.log(items);
 	return (
-		<table className="center">
-		  <tbody>{items}</tbody>
-		</table>
+		<div className="center">
+	      <div>{items}</div>
+	    </div>
 	);
 }
 
 function SongListElement({song}){
 	let audioApiSrc = `/raw/${song.artist}/${song.album}/${song.song}`;
 	return (
-		<tr>
+		<div className="AlbumCard vertical-center margin15px">
 			<div>{song.song}</div>
 			<audio controls preload="metadata" src={audioApiSrc}></audio>
-		</tr>
+		</div>
 	)
 }

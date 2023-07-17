@@ -1,3 +1,7 @@
+body {
+  background-color: #777;
+}
+
 .App {
   text-align: center;
 }
@@ -65,7 +69,7 @@
   justify-content: center;
   margin: 2vh;
   padding: 1vh;
-  border: 2px black solid;
+  /*border: 2px black solid;*/
   height: 5vh;
   width: 25vw;
   margin-left: auto;
@@ -73,6 +77,23 @@
   align-items: center;
   border-radius: 1vh;
   background-color: #EEE;
+  background-image: linear-gradient(-135deg, #bbb, white);
+}
+
+.AlbumCard {
+  display: flex;
+  justify-content: left;
+  margin: 2vh;
+  padding: 1vh;
+  /*border: 2px black solid;*/
+  height: auto;
+  width: 25vw;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  border-radius: 1vh;
+  background-color: #EEE;
+  background-image: linear-gradient(-135deg, #bbb, white);
 }
 
 table {

@@ -72,21 +72,27 @@ function AlbumList({albums}){
 		);
 	})
 	return (
-		<table className="center">
-		  <tbody>{items}</tbody>
-		</table>
+		<div className="center">
+	      <div>{items}</div>
+	    </div>
 	);
 }
+
+/*
+<table className="center">
+  <tbody>{items}</tbody>
+</table>
+*/
 
 function AlbumListElement({album}){
 	let imgSrc = `/raw/${album.artist}/${album.name}/cover`;
 	let altText = `Album art for ${album.name} by ${album.artist}`;
 	let placeholder = '/cover_placeholder.svg';
 	return (
-    <tr className="vertical-center margin15px" >
-    	<img alt={altText} width="150px" height="auto" src={placeholder} />
-    	<Link  to="/artist/album" state={album}>{album.name}</Link>
-    </tr>
+    <div className="AlbumCard vertical-center margin15px" >
+    	<img alt={altText} width="100px" height="auto" src={placeholder} />
+    	<Link className="margin15px"  to="/artist/album" state={album}>{album.name}</Link>
+    </div>
   )
 }
 
